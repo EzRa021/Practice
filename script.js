@@ -1,4 +1,4 @@
-// Fetch workplan data from JSON file
+
 async function fetchWorkplanData() {
   try {
     const response = await fetch('state_workplan_json.JSON');
@@ -11,14 +11,14 @@ async function fetchWorkplanData() {
   }
 }
 
-// Convert date format to 'Day, Month Date' (e.g., 'Wed, Oct 23')
+
 const formatDate = (dateStr) => {
   const date = new Date(dateStr);
   const options = { weekday: 'short', month: 'short', day: 'numeric' };
   return date.toLocaleDateString(undefined, options);
 };
 
-// Map data to the table
+
 const populateTable = (data) => {
   const thead = document.querySelector("thead tr");
   const tbody = document.querySelector("tbody");
@@ -42,14 +42,14 @@ const populateTable = (data) => {
   times.forEach((time) => {
     const tr = document.createElement("tr");
     const tdTime = document.createElement("td");
-    tdTime.className = "border-2 border-red-300 td-date";
+    tdTime.className = "border border-red-300 text-sm text-center td-date";
     tdTime.innerText = time;
     tr.appendChild(tdTime);
 
     // For each date column, insert trip status and lead if it matches the time
     data.forEach((entry) => {
       const td = document.createElement("td");
-      td.className = "border-2 border-red-300";
+      td.className = "border border-red-300";
       if (entry.trip_start_time === time) {
         const div = document.createElement("div");
         div.className = "p-1 m-1 bg-green-400 rounded-lg";
@@ -73,7 +73,7 @@ const populateTable = (data) => {
   });
 };
 
-// Initialize the table
+
 async function initializeTable() {
   const data = await fetchWorkplanData();
   if (data.length > 0) {
@@ -81,5 +81,5 @@ async function initializeTable() {
   }
 }
 
-// Run the initialization when the document is ready
+
 document.addEventListener('DOMContentLoaded', initializeTable);
