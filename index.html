@@ -12,13 +12,24 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
-    <header></header>
-    <main class="text-gray-600 p-5 bg-gray-100 grid grid-cols-12 gap-5 w-full h-full">
-        <div class="col-span-2 bg-white px-4 py-5 rounded-lg shadow-lg flex flex-col items-center">
+<body class="bg-gray-100">
+    <!-- Mobile Menu Button - Only visible on small screens -->
+    <div class="lg:hidden fixed top-0 left-0 right-0 bg-white z-50 px-4 py-3 flex justify-between items-center shadow-md">
+        <div>
+            <h1 class="text-xs  font-medium">Caritas</h1>
+            <p class="text-xs  font-bold text-red-400">Nigeria</p>
+        </div>
+        <button id="menuButton" class="text-gray-600 focus:outline-none">
+            <i class="fas fa-bars text-xl"></i>
+        </button>
+    </div>
+
+    <main class="text-gray-600 p-2 md:p-5 bg-gray-100 flex flex-col lg:flex-row gap-5 w-full min-h-screen">
+        <!-- Sidebar -->
+        <div id="sidebar" class="hidden lg:block w-full lg:w-64 bg-white px-4 py-5 rounded-lg shadow-lg">
             <div class="ml-auto mb-5">
-                <h1 class="text-xs font-medium">Caritas</h1>
-                <p class="text-xs font-bold text-red-400">Nigeria</p>
+                <h1 class="text-xs text-right font-medium">Caritas</h1>
+                <p class="text-xs text-right font-bold text-red-400">Nigeria</p>
             </div>
             <div class="mb-5 w-full pb-3 border-b">
                 <h1 class="text-center leading-4 text-red-800 font-bold">WorkPlan <br> Management <br> System</h1>
@@ -30,27 +41,24 @@
                 <p class="text-center text-xs mt-2">Technical Officer Health <br> Informatics</p>
             </div>
             <ul class="text-center mb-5 mt-1 font-xs">
-                <li class="list hover:text-white hover:bg-red-700 rounded-lg py-2 px-5">Manage User</li>
-                <li class="list hover:text-white hover:bg-red-700 text-gray-600 rounded-lg py-2 px-5">Create Workplan
-                </li>
-                <li class="list hover:text-white hover:bg-red-700 text-gray-600 rounded-lg py-2 px-5">View State
-                    Workplan</li>
-                <li class="list hover:text-white hover:bg-red-700 text-gray-600 rounded-lg py-2 px-5">Workplan Status
-                </li>
-                <li class="list hover:text-white hover:bg-red-700 text-gray-600 rounded-lg py-2 px-5">Upload Status</li>
-                <li class="list hover:text-white hover:bg-red-700 text-gray-600 rounded-lg py-2 px-5">Report History
-                </li>
-                <li class="list hover:text-white hover:bg-red-700 text-gray-600 rounded-lg py-2 px-5">Facility Visit
-                    Summary</li>
-                <li class="list hover:text-white hover:bg-red-700 text-gray-600 rounded-lg py-2 px-5">Settings</li>
+                <li class="list hover:text-white hover:bg-red-700 rounded-lg py-2 px-5 cursor-pointer">Manage User</li>
+                <li class="list hover:text-white hover:bg-red-700 text-gray-600 rounded-lg py-2 px-5 cursor-pointer">Create Workplan</li>
+                <li class="list hover:text-white hover:bg-red-700 text-gray-600 rounded-lg py-2 px-5 cursor-pointer">View State Workplan</li>
+                <li class="list hover:text-white hover:bg-red-700 text-gray-600 rounded-lg py-2 px-5 cursor-pointer">Workplan Status</li>
+                <li class="list hover:text-white hover:bg-red-700 text-gray-600 rounded-lg py-2 px-5 cursor-pointer">Upload Status</li>
+                <li class="list hover:text-white hover:bg-red-700 text-gray-600 rounded-lg py-2 px-5 cursor-pointer">Report History</li>
+                <li class="list hover:text-white hover:bg-red-700 text-gray-600 rounded-lg py-2 px-5 cursor-pointer">Facility Visit Summary</li>
+                <li class="list hover:text-white hover:bg-red-700 text-gray-600 rounded-lg py-2 px-5 cursor-pointer">Settings</li>
             </ul>
-            <div class="text-center">
+            <div class="text-center flex justify-center items-center">
                 <button class=" flex justify-center items-center gap-3 mt-10"><img src="/images/002-logout.png" alt=""><p class="text-sm">Log out</p></button>
             </div>
         </div>
-        <div class="col-span-10 w-full">
-            <div class="flex justify-between mt-16 border-b pb-3">
-                <h1 class="text-3xl">User Account</h1>
+
+        <!-- Main Content -->
+        <div class="flex-1 w-full mt-16 lg:mt-16">
+            <div class="flex flex-col md:flex-row justify-between md:items-center border-b pb-3 md:pl-10">
+                <h1 class="text-2xl md:text-3xl mb-4 md:mb-0">User Account</h1>
                 <div class="flex gap-4">
                     <button class="h-10 bg-white w-10 p-1 shadow-lg rounded-full flex justify-center items-center">
                         <img class="block h-6 w-6" src="/images/user-svgrepo-com.svg" alt="User's Face" />
@@ -61,7 +69,9 @@
                     <button><img class="block h-6 w-6" src="/images/arrow-down-simple-svgrepo-com.svg" alt=""></button>
                 </div>
             </div>
-            <div class="bg-white mt-5 rounded-lg shadow-lg my-10 mx-20 p-14">
+
+            <!-- Workplan Section -->
+            <div class="bg-white mt-5 rounded-lg shadow-lg my-5 md:my-10 mx-2 md:mx-20 p-4 md:py-20">
                 <h1>View Workplan</h1>
                 <!-- Date Display -->
                 <div class="w-28 rounded-xl mt-7 flex gap-3 border-2 p-1 border-red-300">
@@ -69,11 +79,10 @@
                     <p class="text-xs">Oct 2024</p>
                     <button><img class="block h-3 w-3" src="/images/arrow-right-svgrepo-com.svg" alt=""></button>
                 </div>
-                <!-- Workplan Table -->
                 <div class="mt-8  overflow-hidden rounded-lg ">
                     <table class="border-collapse border border-slate-500 w-full rounded-lg">
                         <thead class="bg-red-700 py-5 border border-red-700">
-                            <tr class="text-xs text-white">
+                            <tr class="text-xs text-center text-white">
                                 <th class="th-nav text-center"><img class="block h-3 w-3 ml-2" src="/images/arrow-left-svgrepo-com(2).svg" alt=""></th>
                                 <!-- Dates will be populated here by script.js -->
                             </tr>
@@ -84,9 +93,46 @@
                     </table>
                 </div>
             </div>
+            </div>
         </div>
     </main>
-    <footer></footer>
+
+    <script>
+       
+        document.getElementById('menuButton').addEventListener('click', function() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('hidden');
+            sidebar.classList.toggle('fixed');
+            sidebar.classList.toggle('top-12');
+            sidebar.classList.toggle('left-0');
+            sidebar.classList.toggle('right-0');
+            sidebar.classList.toggle('z-40');
+        });
+e
+        document.addEventListener('click', function(event) {
+            const sidebar = document.getElementById('sidebar');
+            const menuButton = document.getElementById('menuButton');
+            
+            if (!sidebar.contains(event.target) && !menuButton.contains(event.target) && !sidebar.classList.contains('hidden') && window.innerWidth < 1024) {
+                sidebar.classList.add('hidden');
+            }
+        });
+
+       
+        window.addEventListener('resize', function() {
+            const sidebar = document.getElementById('sidebar');
+            if (window.innerWidth >= 1024) {
+                sidebar.classList.remove('fixed', 'top-12', 'left-0', 'right-0', 'z-40');
+                if (sidebar.classList.contains('hidden')) {
+                    sidebar.classList.remove('hidden');
+                }
+            } else {
+                if (!sidebar.classList.contains('hidden')) {
+                    sidebar.classList.add('hidden');
+                }
+            }
+        });
+    </script>
     <script src="/script.js"></script>
 </body>
 
