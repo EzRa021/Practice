@@ -1,0 +1,132 @@
+[
+  {
+    "trip_id": 2,
+    "work_plan_id": 1,
+    "activity_title": "",
+    "workplan_code": "WP-1-202410231423",
+    "trip_start_time": "08:00 AM",
+    "actual_start_time": "Not started",
+    "activity_date": "2024-10-23",
+    "workplan_source_name": "Unit",
+    "implementing_team": "Health Informatics Unit",
+    "trip_status": "Trip Scheduled",
+    "trip_lead": "Nelson Attah",
+    "employee_names": [
+      "Nelson Attah",
+      "Samuel Uzochukwu",
+      "Onyedikachi Ezeobi"
+    ],
+    "vehicle_name": "White Bus",
+    "vehicle_license_plate": "32J321FG",
+    "driver_name": "Okon eyo Pual",
+    "location_names": [
+      "Aba"
+    ],
+    "site_names": [
+      {
+        "site_name": "New Era",
+        "id": 3
+      }
+    ],
+    "srt_id": null,
+    "unit_id": 1,
+    "department_id": null
+  },
+  {
+    "trip_id": 4,
+    "work_plan_id": 2,
+    "activity_title": "PBS work",
+    "workplan_code": "WP-2-202410231423",
+    "trip_start_time": "08:00 AM",
+    "actual_start_time": "Not started",
+    "activity_date": "2024-10-24",
+    "workplan_source_name": "Department",
+    "implementing_team": "Health Informatics Unit",
+    "trip_status": "Trip Scheduled",
+    "trip_lead": "Nelson Attah",
+    "employee_names": [
+      "Nelson Attah",
+      "Samuel Uzochukwu",
+      "Onyedikachi Ezeobi"
+    ],
+    "vehicle_name": "4Runner Jeep",
+    "vehicle_license_plate": "12R890FG",
+    "driver_name": "Benjaminn Ikpebe",
+    "location_names": [
+      "Arochukwu"
+    ],
+    "site_names": [
+      {
+        "site_name": "St Anthony Arochukwu",
+        "id": 5
+      }
+    ],
+    "srt_id": null,
+    "unit_id": 1,
+    "department_id": 1
+  },
+  {
+    "trip_id": 1,
+    "work_plan_id": 3,
+    "activity_title": "PBS Tas",
+    "workplan_code": "WP-3-202410231423",
+    "trip_start_time": "08:00 AM",
+    "actual_start_time": "Not started",
+    "activity_date": "2024-10-25",
+    "workplan_source_name": "SRT",
+    "implementing_team": "SRT A",
+    "trip_status": "Trip Scheduled",
+    "trip_lead": "Nelson Attah",
+    "employee_names": [
+      "Eucharia Nwafor",
+      "Nelson Attah"
+    ],
+    "vehicle_name": "4Runner Jeep",
+    "vehicle_license_plate": "32J211FG",
+    "driver_name": "Adejo collins Achegbulu",
+    "location_names": [
+      "Aba"
+    ],
+    "site_names": [
+      {
+        "site_name": "New Era",
+        "id": 3
+      }
+    ],
+    "srt_id": 1,
+    "unit_id": null,
+    "department_id": null
+  },
+  {
+    "trip_id": 3,
+    "work_plan_id": 4,
+    "activity_title": "PBS Task",
+    "workplan_code": "WP-4-202410231423",
+    "trip_start_time": "08:00 AM",
+    "actual_start_time": "Not started",
+    "activity_date": "2024-10-26",
+    "workplan_source_name": "ThematicArea",
+    "implementing_team": "PBS Optimization",
+    "trip_status": "Trip Scheduled",
+    "trip_lead": "Nelson Attah",
+    "employee_names": [
+      "Nelson Attah",
+      "Onyedikachi Ezeobi"
+    ],
+    "vehicle_name": "White Bus",
+    "vehicle_license_plate": "12R933FG",
+    "driver_name": "Ernest Ugwu",
+    "location_names": [
+      "Aba"
+    ],
+    "site_names": [
+      {
+        "site_name": "New Era",
+        "id": 3
+      }
+    ],
+    "srt_id": null,
+    "unit_id": null,
+    "department_id": null
+  }
+]

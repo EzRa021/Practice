@@ -1,0 +1,21 @@
+.list{
+    font-size: 0.8rem;
+}
+.data1{
+    font-size: 0.7rem;
+}
+.data2{
+    font-size: 0.5rem;
+}
+td{
+    width: 200px;
+}
+th{
+    width: 200px;
+}
+.td-date{
+    width: 50px;
+}
+.th-nav{
+width: 40px;
+}
